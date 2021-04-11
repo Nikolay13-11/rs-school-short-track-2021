@@ -12,23 +12,23 @@
  *
  */
 function findIndex(array, value) {
-  let result = 0;
   let start = 0;
   let end = array.length - 1;
-  let mid = Math.floor((start + end) / 2);
-  let mid_val = array[mid];
+  let mid = 0;
+  let midval = 0;
   while (start <= end) {
-    let mid = Math.floor((start + end) / 2);
-    let mid_val = array[mid];
-    if (mid_val === value) {
+    mid = Math.floor((start + end) / 2);
+    midval = array[mid];
+    if (midval === value) {
       return mid;
     }
-    if (mid_val > value) {
+    if (midval > value) {
       end = mid - 1;
     } else {
       start = mid + 1;
     }
   }
+  return null;
 }
 
 module.exports = findIndex;

@@ -14,12 +14,11 @@
  */
 function isMAC48Address(n) {
   const regex1 = /[0-9A-F\p{Pd}]/gu;
-  let a = n.match(regex1);
-  if (a.length == 17 && a.length == n.length){
+  const a = n.match(regex1);
+  if (a.length === 17 && a.length === n.length) {
     return true;
-  } else {
-    return false;
   }
+  return false;
 }
 
 module.exports = isMAC48Address;
